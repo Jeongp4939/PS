@@ -1,10 +1,4 @@
 def d(n):
-    n_s = n
-    for i in str(n):
-        n_s += int(i)
-    return n_s
-
-def d2(n):
     li = []
     result = []
     for i in range(1, n+1):
@@ -18,6 +12,6 @@ def d2(n):
             li.remove(k)
     return li
 
-list = d2(10000)
+list = d(10000)
 for i in list:
     print(i)
