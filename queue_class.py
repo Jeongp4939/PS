@@ -1,4 +1,4 @@
-class Queue():
+class Queue:
     def __init__(self, n):
         self.queue_list = [None for _ in range(n)]
         self.queue_size = 0

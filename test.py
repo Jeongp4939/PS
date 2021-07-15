@@ -111,11 +111,37 @@
 # cnt = 0
 # for i in range(2,100):
 
+#
+# n, m, k = map(int, input().split())
+# a = list(map(int, input().split()))
+# a.sort(reverse=True)
+# # if m % k == 0:
+# print(a[0]*(m-(m//(k+1))) + a[1]*(m//(k+1)))
+# # elif k <= m:
+# #     print(a[0]*k*(m//k) + a[1]*(m%k))
 
-n, m, k = map(int, input().split())
-a = list(map(int, input().split()))
-a.sort(reverse=True)
-# if m % k == 0:
-print(a[0]*(m-(m//(k+1))) + a[1]*(m//(k+1)))
-# elif k <= m:
-#     print(a[0]*k*(m//k) + a[1]*(m%k))
+
+# table = 100
+# 최소 2명, 최대 10명
+# remain = 100 - x; remain -= x
+memo = {}       #중복된 연산이 필요한 경우 메모화 사용시 효율성 증가
+max_p = 10
+least = 2
+total = 100
+def table_setting(remain, sit):
+    key = str((remain, sit))
+    if key in memo:
+        return memo[key]
+    if remain < 0:      #잘못된 경우
+        return 0
+    if remain == 0:     #유효한 값
+        return 1
+    #재귀
+    count = 0
+    for i in range(sit, max_p + 1):
+        count += table_setting(remain -i, i)
+    memo[key] = count
+    return count
+
+print( table_setting(total, least) )
+
