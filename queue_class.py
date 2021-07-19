@@ -50,6 +50,7 @@
 #         return self.queue_list[self.queue_size-1]
 #         # return self.queue_list[self.b_idx]
 
+import sys
 
 class Queue:
     def __init__(self, n):
@@ -112,5 +113,5 @@ queue_a = Queue(n)
 
 
 for _ in range(n):
-    command = input().split(" ")
+    command = sys.stdin.readline().split()
     run_cmd_with_queue(queue_a, command)

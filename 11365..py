@@ -2,7 +2,7 @@ import sys
 string =[]
 result = []
 while True:
-    string.append(sys.stdin.readline().rstrip())
+    string.append(sys.stdin.readline().rstrip())  #\n
     if string[len(string)-1] == 'END':
         break
 for i in string[:-1]:

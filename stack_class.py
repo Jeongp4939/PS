@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.readline
+
 class Stack:
     def __init__(self, n):
         self.stack_list = [None for _ in range(n)]
@@ -37,5 +40,5 @@ n=int(input())
 stack_a = Stack(n)
 
 for _ in range(n):
-    command = input().split(" ")
+    command = input().split()
     run_cmd_with_stack(stack_a, command)

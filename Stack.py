@@ -1,6 +1,6 @@
 def process_stack(arr, command):
     if command[0] == 'push':
-        arr.append(command[1])
+        arr.append(int(command[1]))
     elif command[0] == 'pop':
         if arr == []:
             print(-1)
