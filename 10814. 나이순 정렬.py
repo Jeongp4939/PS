@@ -1,3 +1,6 @@
+# import sys
+# input = sys.stdin.readline
+#
 # n = int(input())      # 입력받을 멤버의 숫자
 # li = []
 # for _ in range(n):    # n 만큼의 member 를 입력 받아 리스트에 추가
@@ -7,8 +10,25 @@
 #     for i in range(len(li)-1-j):
 #         if li[i][:li[i].index(' ')] > li[i+1][:li[i+1].index(' ')]:   # ' '공백을 기준으로 앞의 숫자를 비교하여 정렬
 #             li[i], li[i+1] = li[i+1], li[i]
-# print(li)
+# for i in li:
+#     print(i)
 #====================== 시간초과 ==============================
+# import sys
+# input = sys.stdin.readline
+#
+# n = int(input())      # 입력받을 멤버의 숫자
+# li = []
+# for _ in range(n):    # n 만큼의 member 를 입력 받아 리스트에 추가
+#     li.append(input().split())
+# for j in range(len(li)-1):
+#     for i in range(len(li)-1-j):
+#         if li[i][0] > li[i + 1][0]:
+#             li[i], li[i+1] = li[i+1], li[i]
+# for i in li:
+#     print(i[0], i[1])
+
+#================================================================
+
 import sys
 input = sys.stdin.readline
 

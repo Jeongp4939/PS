@@ -27,7 +27,7 @@ def solution():                             # 모든 구문을 한번에 끝내�
 
     if num % a == 0:                        # num이 a의 배수라면 바로 정지
         return 1
-    for i in range((num+1)//a):
+    for i in range((num)//a):
         remain.append(num-a*i)              # a의 배수가 아닐 때 num에서 a의 배수를 뺀 나머지를 배열로 생성
     remain = list(set(remain))              # 계산을 줄이기 위해 중복 제거
     for i in range(len(remain)):
