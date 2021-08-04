@@ -20,5 +20,6 @@ def combination2(n, r):
 
 
 print(permutation(5, 3))
-print(combination(10, 3))
+print(combination(9, 7))
+
 
