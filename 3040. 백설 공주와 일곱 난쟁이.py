@@ -14,7 +14,7 @@ for _ in range(9):
 
 for i in range(len(dwarf)):
     for j in range(i+1, len(dwarf)):
-        if sum(dwarf[:i]) + sum(dwarf[i + 1:j]) + sum(dwarf[j + 1:]) == 100:
+        if sum(dwarf[:i]) + sum(dwarf[i + 1:j]) + sum(dwarf[j + 1:]) == 100:    # 9 개중 2개를 제외한(7개)의 합 검사
             dwarf_hat_sum = dwarf[:i] + dwarf[i + 1:j]+ dwarf[j+1:]
 for i in dwarf_hat_sum:
     print(i)
