@@ -1,3 +1,5 @@
+# https://www.acmicpc.net/problem/20546
+#
 # 장기 투자를 지향하는 준현이는 한 번 산 주식은 절대 팔지 않는다.
 # 주식 매수 후 오로지 기도만 하기 때문에 이를 BNP 전략이라고 한다.
 # BNP는 Buy and Pray의 약자이다.

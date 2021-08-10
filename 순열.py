@@ -19,7 +19,6 @@ def combination2(n, r):
     return int(combination(n-1, r-1) + combination(n-1, r))
 
 
-print(permutation(5, 3))
-print(combination(9, 7))
-
+# print(permutation(5, 3))
+# print(combination(9, 7))
 
