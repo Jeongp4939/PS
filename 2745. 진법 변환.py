@@ -6,12 +6,44 @@
 #
 # A: 10, B: 11, ..., F: 15, ..., Y: 34, Z: 35
 
-n, b = input().split()                              # n과 진법의 기준이 되는 b를 입력 받음
-a = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'          # 0~9,A~Z : 0~35 index를 가지는 문자열
-res = 0                                               # n의 10진수 표현이 될 수
 
-for i in range(len(n)):
-    res+= a.index(n[i]) * (int(b) ** (len(n) - 1 - i))      # a에서 n의 i번째 문자의 인덱스 * b(진법) * 10의 (n[i]의 자리수-1) 제곱
-print(res)                                            # 결과 값 출력
+# n, b = input().split()                              # n과 진법의 기준이 되는 b를 입력 받음
+# a = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'          # 0~9,A~Z : 0~35 index를 가지는 문자열
+# res = 0                                               # n의 10진수 표현이 될 수
+#
+# for i in range(len(n)):
+#     res+= a.index(n[i]) * (int(b) ** (len(n) - 1 - i))      # a에서 n의 i번째 문자의 인덱스 * b(진법) * 10의 (n[i]의 자리수-1) 제곱
+# print(res)                                            # 결과 값 출력
+#
 
+#==================== int()를 이용한 변환 =========================
 
+# n, b = input().split()
+# print(int(n, int(b)))
+
+#======================== ord() =================================
+
+# n, b = input().split()
+# digit = len(n)
+# res = 0
+# for i in range(digit):
+#     res += (ord(n[i])-55)*int(b)**(digit-i-1)
+# print(res)
+
+#===============================================================
+
+# def to_decimal(n:list, b, res):
+#     if not len(n):
+#         return res
+#     res += (ord(n[0])-55) * int(b) ** (len(n)-1)
+#     n.pop(0)
+#     return to_decimal(n, b, res)
+#
+# n, b = input().split()
+# n = list(n)
+# digit = len(n)
+# res = 0
+#
+# print(to_decimal(n, b, res))
+
+#===============================================================
