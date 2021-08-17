@@ -20,6 +20,7 @@
 # if x == y and (p_x % x) != (p_y % y):
 #     print(-1)
 #     exit()
+#
 # while True:
 #     if p_x > p_y:                                 # p_x 가 p_y보다 클 때 p_y에 y를 더해줌
 #         p_y += y
@@ -52,12 +53,12 @@
 #         break
 
 # ============================= 인터넷 검색 ====================================
-#
+
 # x,y,p1,p2 = map(int,input().split())
 # runx = set(range(p1, 10**6, x))
 # runy = set(range(p2, 10**6, y))
 #
-# print(10**6)
+# # print(10**6)
 # R = runx&runy
 # print(min(R) if R else -1)
 
