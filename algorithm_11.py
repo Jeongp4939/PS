@@ -29,3 +29,13 @@ for start, end in time_list:
         cnt += 1
 
 print(cnt)
+
+#==============================================
+
+n = int(input())
+meet_time = []
+
+for _ in range(n):
+    start_time, end_time = map(int, input().split())
+    meet_time.append((start_time, end_time))
+
