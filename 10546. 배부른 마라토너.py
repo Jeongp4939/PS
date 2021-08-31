@@ -19,7 +19,7 @@ for i in join_dict.keys():
         print(i)
         break
     elif join_dict[i] != finish_dict[i]:
-            print[i]
+            print(i)
             break
 
-# FAIL
+

@@ -8,8 +8,8 @@ def binary_search(arr, target, low, high):
         return binary_search(arr, target, low, mid_idx-1)
     elif arr[mid_idx] < target:
         return binary_search(arr, target, mid_idx+1, high)
-    else:
-        return 1
+
+    return 1
 
 n = int(input())
 n_list = sorted(list(map(int, input().split())))
@@ -37,8 +37,9 @@ for i in range(m):
 #
 #     start_idx = 0
 #     end_idx = n - 1
+#     find_result = 0
 #
-#     while 1:
+#     while start_idx <= end_idx:
 #         mid_idx = (start_idx + end_idx) // 2
 #
 #         if num_list[mid_idx] > target_num:
@@ -46,5 +47,8 @@ for i in range(m):
 #         elif num_list[mid_idx] < target_num:
 #             start_idx = mid_idx + 1
 #         else:
-#             print("1")  # print(mid_idx)
+#             find_result = 1  # print(mid_idx)
 #             break
+#     print (find_result)
+
+# ========================================================
