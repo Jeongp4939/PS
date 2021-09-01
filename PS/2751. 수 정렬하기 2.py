@@ -36,3 +36,19 @@ result = merge_sort(li)
 
 for i in result:
     print(i)
+
+
+# ==========================================================
+
+# import sys
+#
+# a = int(input())
+# num = []
+# for _ in range(a):
+#     num.append(int(sys.stdin.readline()))
+#
+# for i in sorted(num):
+#     sys.stdout.write(str(i) + "\n")
+
+# ==========================================================
+
