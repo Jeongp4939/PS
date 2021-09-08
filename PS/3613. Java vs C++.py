@@ -8,7 +8,7 @@ flag = 0
 if '_' in name:
     if '__' in name:
         print('Error!')
-
+        exit()
     li = name.split('_')
     for i in range(len(li)):
         if i == 0:

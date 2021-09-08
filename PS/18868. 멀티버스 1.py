@@ -17,10 +17,13 @@ for i in space_list_comb:
     for j in n_list:
         flag = 1
         for k in n_list:
-            if i[0][j] < i[0][k] and i[1][j] >= i[1][k]:
-                flag = 0
-                break
-            elif i[0][j] > i[0][k] and i[1][j] <= i[1][k]:
+            if i[0][j] < i[0][k] and i[1][j] < i[1][k]:
+                continue
+            elif i[0][j] > i[0][k] and i[1][j] > i[1][k]:
+                continue
+            elif i[0][j] == i[0][k] and i[1][j] == i[1][k]:
+                continue
+            else:
                 flag = 0
                 break
         if flag == 0:

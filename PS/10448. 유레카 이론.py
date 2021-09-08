@@ -1,4 +1,7 @@
 # https://www.acmicpc.net/problem/10448
+
+# 2 3 4 (n+1)
+
 T = {}
 
 T[1] = 1
