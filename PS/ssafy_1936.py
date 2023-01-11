@@ -1,0 +1,153 @@
+# a, b = input().split()
+# a = int(a)
+# b = int(b)
+#
+# if a==1:
+#     if b==2:
+#         print("B")
+#     else:
+#         print("A")
+# elif a==2:
+#     if b==1:
+#         print("A")
+#     else:
+#         print("B")
+# else:
+#     if b==1:
+#         print("B")
+#     else:
+#         print("A")
+
+# a = int(input())
+# sum = 0
+# if a > 10:
+#     a = str(a)
+#     for i in a:
+#         sum += int(i)
+# else:
+#     sum = a
+# print(sum)
+
+
+#
+# for i in range(10):
+#     tc_num = int(input())
+#     test_map = []
+#
+#     for j in range(100):
+#         test_map.append(list(map(int, input().split())))
+#
+#     # print(test_map)
+#     sum_li=[]
+#     sum_d1, sum_d2 = 0, 0
+#     sum_hor, sum_ver = [], []
+#
+#     for j in range(100):
+#         sum_d1 += test_map[j][j]
+#         sum_d2 += test_map[j][-1-j]
+#         sum_hor.append(sum(test_map[j]))
+#     for j in range(100):
+#         sum_v=0
+#         for k in range(100):
+#             sum_v += test_map[k][j]
+#         sum_ver.append(sum_v)
+#
+#     sum_li.append(max(sum_ver))
+#     sum_li.append(max(sum_hor))
+#     sum_li.append(sum_d1)
+#     sum_li.append(sum_d2)
+#
+#     print(f'#{tc_num} {max(sum_li)}')
+#
+
+from itertools import combinations
+# tc = int(input())
+# for test_case in range(1,tc+1):
+#     n, k, m = map(int,input().split())
+#     n_lists = []
+#     result = 0
+#
+#
+#
+#     print(f'#{test_case} {result}')
+
+# n, k, m = map(int,input().split())
+# lists = list(range(1,1+n,1))
+# comb_list = list(combinations(lists,k))
+# result = 0
+# for i in comb_list:
+#     mul = 1
+#     for j in range(len(i)):
+#         mul *= i[j]
+#     result += mul
+# # result %= m
+# print(result)
+
+
+# from datetime import datetime
+#
+# today = datetime.today()
+# print(today.month)
+
+#
+# from functools import reduce
+#
+# print(reduce(lambda x,y : x + y, [0, 1, 2, 3, 4]))
+#
+# print(reduce(lambda x,y : y + x, 'abcde'))
+#
+# a = {1:0, }
+#
+# print(type(a)); print(a)
+
+#
+# colwidth = 51
+# rule90 = {'000':'0', '001':'1', '010':'0', '011':'1', '100':'1', '101':'0', '110':'1', '111':'0'}
+#
+# half = colwidth // 2
+# line = '0' * half + '1' + '0' * half
+# print(line)
+#
+# while line[1] == '0':
+#     prev = line
+#     line = '0' * colwidth
+#     for i in range(1, colwidth - 1):
+#         line = line[:i] + rule90[prev[i-1:i+2]] + line[i+1:]
+#     print(line)
+
+# def roll_matrix(arr, n):
+#     result = [[0 for row in range(n)] for col in range(n)]
+#
+#     for i in range(n):
+#         for j in range(n):
+#             result[n - j - 1][i] = arr[i][j]
+#
+#     return result
+#
+# tc = int(input())
+#
+# for testcase in range(tc):
+#
+#     n = int(input())
+#     a = []
+#
+#     for i in range(n):
+#         a.append(list(map(int, input().split())))
+#
+#     roll_270 = roll_matrix(a, n)
+#     roll_180 = roll_matrix(roll_270, n)
+#     roll_90 = roll_matrix(roll_180, n)
+#     print(f'#{testcase+1}')
+#     for i in range(n):
+#         temp = ""
+#         for j in range(n):
+#             temp += str(roll_90[i][j])
+#         temp += ' '
+#         for j in range(n):
+#             temp += str(roll_180[i][j])
+#         temp += ' '
+#         for j in range(n):
+#             temp += str(roll_270[i][j])
+#         print(temp)
+
+
