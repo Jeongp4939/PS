@@ -190,3 +190,18 @@ for testcase in range(tc):
 
     print(f'#{testcase+1} {result}')
 '''
+
+'''
+tc = int(input())
+
+for testcase in range(tc):
+    n = int(input())
+    print(f'#{testcase+1} {n**2}')
+'''
+
+# 미로 (1,1) 시작 (13,13) 도착
+tc = int(input())
+
+for testcase in range(tc):
+
+    print(f'#{testcase} ')
