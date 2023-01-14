@@ -202,37 +202,39 @@
 
 # 미로 크기는 16x16 (1,1) 시작 (13,13) 도착 이동 거리가 일정하므로 BFS를 이용하면 좋다
 
-move = [(1,0),(-1,0),(0,1),(0,-1)] # 상하좌우 이동 리스트
+# move = [(1,0),(-1,0),(0,1),(0,-1)] # 상하좌우 이동 리스트
+#
+# def boundary(y,x): #경계
+#     if y<0 or x <0 or y>=16 or x>=16:
+#         return True
+#     return False
+#
+# for _ in range(1,11):
+#     tc = int(input())
+#     y, x = 1, 1
+#     result = 0
+#     map_list = [list(map(int, list(input()))) for _ in range(16)]
+#
+#     stack = [(y,x)]
+#     while stack:
+#         y, x = stack.pop()
+#         map_list[y][x] = 1
+#         for my, mx in move:
+#             dy = y + my
+#             dx = x + mx
+#
+#             if boundary(dy,dx): #벽을 만나면 다른길로
+#                 continue
+#             if map_list[dy][dx] == 3: #도착
+#                 result = 1
+#                 break
+#             elif not map_list[dy][dx]:
+#                 stack.append((dy,dx))
+#         else:
+#             continue
+#         break
+#
+#     print(f'#{tc} {result}')
 
-def boundary(y,x): #경계
-    if y<0 or x <0 or y>=16 or x>=16:
-        return True
-    return False
 
-for _ in range(1,11):
-    tc = int(input())
-    y, x = 1, 1
-    result = 0
-    map_list = [list(map(int, list(input()))) for _ in range(16)]
-
-    stack = [(y,x)]
-    while stack:
-        y, x = stack.pop()
-        map_list[y][x] = 1
-        for my, mx in move:
-            dy = y + my
-            dx = x + mx
-
-            if boundary(dy,dx): #벽을 만나면 다른길로
-                continue
-            if map_list[dy][dx] == 3: #도착
-                result = 1
-                break
-            elif not map_list[dy][dx]:
-                stack.append((dy,dx))
-        else:
-            continue
-        break
-
-    print(f'#{tc} {result}')
 
